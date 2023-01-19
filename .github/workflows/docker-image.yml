@@ -26,4 +26,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: mayankahuja/aksagentwithdocker:2.0
+          tags: mayankahuja/aksagent:2.0
