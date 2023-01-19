@@ -75,20 +75,15 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommend
 RUN curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 #RUN curl -LO https://dl.k8s.io/release/v1.25.2/bin/linux/amd64/kubectl
 RUN install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
-
 # Install azure CLI
 RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
-
 # Install azure devops extentions
 RUN az config set extension.use_dynamic_install=yes_without_prompt
 RUN az extension add --name azure-devops
-
 # Can be 'linux-x64', 'linux-arm64', 'linux-arm', 'rhel.6-x64'.
 ENV TARGETARCH=linux-x64
-
 WORKDIR /azp
 COPY ./start.sh .
-
 RUN chmod +x start.sh
 RUN chmod +x ./start.sh
 ENTRYPOINT [ "./start.sh" ]
