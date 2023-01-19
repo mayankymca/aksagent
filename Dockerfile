@@ -106,8 +106,6 @@ RUN apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin 
 ENV TARGETARCH=linux-x64
 
 WORKDIR /azp
-
-
 COPY ./start.sh .
 
 RUN chmod +x start.sh
