@@ -1,14 +1,10 @@
 name: dockerimagepush
 
 on:
-  push:
+  [push,workflow_dispatch] :
     branches:
       - 'main'
 
-on: 
-  workflow_dispatch:
-    branches:
-      - 'main'
 
 
 jobs:
