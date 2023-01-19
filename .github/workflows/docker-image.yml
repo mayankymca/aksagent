@@ -5,6 +5,12 @@ on:
     branches:
       - 'main'
 
+on: 
+  workflow_dispatch:
+    branches:
+      - 'main'
+
+
 jobs:
   docker:
     runs-on: ubuntu-latest
