@@ -2,7 +2,7 @@ name: dockerimagepush
 
 on:
   push:
-    branches: ["main"]
+    branches: [""] # e.g; main
   workflow_dispatch:
 
 
