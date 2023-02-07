@@ -82,7 +82,7 @@ RUN apt install git -y
 #RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" # as per Azure Pipeline
 #RUN "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" # As per Git hub
 #RUN eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)" # Need to be fixed
-RUN echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /root/.profile
+#RUN echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /root/.profile
 #RUN brew install gcc # Need to be fixed
 
 # Install Kubelogin 
