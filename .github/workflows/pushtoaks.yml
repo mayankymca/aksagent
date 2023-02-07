@@ -1,8 +1,8 @@
 name: pushtoaks
 
 on:
-  #push:
-    #tags: ["v*.*.*"]
+  push:
+    tags: ["v*.*.*"]
   workflow_dispatch:
 
 env:
