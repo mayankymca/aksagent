@@ -121,8 +121,8 @@ RUN install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 
 
 # Login to Azure 
-RUN az login --service-principal -u ${{ secrets.SP_USERNAME }} -p ${{ secrets.SP_PASSWORD }} --tenant ${{ secrets.SP_TENANT_ID }}
-RUN az account set --subscription ${{ secrets.SUB }}
+#RUN az login --service-principal -u ${{ secrets.SP_USERNAME }} -p ${{ secrets.SP_PASSWORD }} --tenant ${{ secrets.SP_TENANT_ID }} # Doesn't work in github
+#RUN az account set --subscription ${{ secrets.SUB }} # Doesn't work in github
 
 # Login to AKS
 #RUN az aks get-credentials --resource-group MyResourceGroup --name mayank --format exec
